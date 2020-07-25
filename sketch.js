@@ -41,11 +41,11 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	World.add(world, ground);
 
-	boxBase = Bodies.rectangle(400, 635, 200, 20, {isStatic:true});
+	boxBase = Bodies.rectangle(400, 640, 200, 20, {isStatic:true});
 	World.add(world, boxBase);
-	boxLeft = Bodies.rectangle(400, 635, 20, 100, {isStatic:true});
+	boxLeft = Bodies.rectangle(300, 600, 20, 100, {isStatic:true});
 	World.add(world, boxLeft);
-	boxRight = Bodies.rectangle(400, 635, 20, 100, {isStatic:true});
+	boxRight = Bodies.rectangle(500, 600, 20, 100, {isStatic:true});
 	World.add(world, boxRight);
 
 	Engine.run(engine);
@@ -61,6 +61,10 @@ function draw() {
 
   rectMode(CENTER);
   rect(packageBody.position.x, packageBody.position.y, 5, 5);
+
+  rect(boxBase.position.x, boxBase.position.y, 200, 20);
+  rect(boxLeft.position.x, boxLeft.position.y, 20, 100);
+  rect(boxRight.position.x, boxRight.position.y, 20, 100);
 
   drawSprites();
  
